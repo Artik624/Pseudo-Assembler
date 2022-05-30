@@ -1,0 +1,20 @@
+output: main.o interpreter.o  actions.o labels.o memory.o instructions.o
+	gcc  main.o interpreter.o  actions.o labels.o memory.o instructions.o -o output
+
+main.o: main.c
+	gcc -c -Wall -ansi -pedantic main.c
+
+interpreter.o: interpreter.c
+	gcc -c -Wall -ansi -pedantic interpreter.c
+
+actions.o: actions.c
+	gcc -c -Wall -ansi -pedantic actions.c
+
+instructions.o: instructions.c
+	gcc -c -Wall -ansi -pedantic instructions.c
+
+labels.o: labels.c
+	gcc -c -Wall -ansi -pedantic labels.c
+
+memory.o: memory.c
+	gcc -c -Wall -ansi -pedantic memory.c
